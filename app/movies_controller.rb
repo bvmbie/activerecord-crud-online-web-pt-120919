@@ -28,10 +28,7 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   # title == "Home Alone"
   # release_date == 1990
   
-  Movie.create do |m|
-    m.title = args[1]
-    m.release_date = args[2]
-  end
+  Movie.create(args)
 end
 
 def can_get_the_first_item_in_the_database
